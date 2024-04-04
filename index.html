@@ -1,965 +1,117 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Institutional Investing | Franklin Templeton Institutional</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
-                    },
-                    animation: {
-                        'infinite-scroll': 'infinite-scroll 50s linear infinite',
-                    },
-                    keyframes: {
-                        'infinite-scroll': {
-                            from: { transform: 'translateX(0)' },
-                            to: { transform: 'translateX(-100%)' },
-                        }
-                    }
-                },
-            },
-        };
-    </script>
-
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<style>
-.header{
-width:100%;
-}
-.header img{
-margin:15px 0px 0px 18px;float:left;
-}
-.header a{
-font-size:12px;color:blue;font-weight:500;
-float:right;padding:20px 30px 20px 0px;
-}
-.header a:hover {
-  text-decoration:underline;
-}
-vl {
-  border-right: 1px solid grey;
-  height:10px;margin:0px 0px 0px 20px;padding:3px;
-}
-.fa{
-padding:0px 5px;
-}
-.header2{
-width:98%;float:left;margin:0px 0px 0px 5px;
-padding:20px 0px 10px 0px;
-font-size:13px;
-}
-.header2 a{
-color:blue;
-float:left;padding:20px 12px;
-}
-.header2 a:hover{
-text-decoration:underline solid #00bfb3 7px ;
-text-underline-offset: 26px;
-}
-.fa-bars{
-visibility:hidden;
-}
-.header i2{
-visibility:hidden;
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
 }
 
-.searchbar{
-border:solid #f1f1f1 2px;width:400px;
-padding:10px;float:right;/*margin:-25px 0px 0px 0px;*/
-font-size:12px;
-}
-.searchbar i{
-float:left;padding:6.5px 10px 0px 7px;color:blue;
-}
-.searchbar p{
-font-size:15px;float:left;
-}
-.bodyrow1{
-  background-image: url("ft.jpg");
-  background-repeat: no-repeat;
-  background-attachment: absolute;
-  background-position: left;
-  height:auto;width:65%;
-  padding:20px 5px 0px 20px;
-  float:left;
-}
-.row1{
-width:100%;
-}
-.row1lhs{
-height:auto;width:65%;padding:35px 0px 0px 30px;
-background-color:#fff;opacity:80%;
-text-align:left;margin-bottom:20px;
+html, body, section, article, aside {
+    min-height: 100%;
 }
 
-.row1lhs h1{
-font-size:37px;
-width:80%;
-}
-.row1lhs p{
-font-size:14px;line-height:1.6;
-width:84%;padding:20px 0px;
-}
-.button1{
-  background-color:#3769ff;color: white;
-  opacity:100%;  border: none;
-  padding: 16px 30px;text-align: center;
-  text-decoration: none;
-  display: inline-block;cursor: pointer;
-  font-size: 15px;margin: 4px 0px 20px 2px;
-  }
-  .button1:hover{
-  background-color:blue;
-  }
-  .rhsbox1{
-  width:32%;padding:2.5% 3% 4% 3%;
-  float:right;margin:0px 0px 13px 0px;
-  background-color:#3769ff;color:#fff;
-  }
-  .rhsbox1:hover{
-  background-color:blue;cursor:pointer;
-  }
-   .rhsbox1 h2{
-  font-size:17px;
-  }
-  .rhsbox1 p{
-  font-size:14px;line-height:1.7;
-
-  }
- .rhsbox2{
-  width:32%;padding:2.5% 3% 4% 3%;
-  float:right;margin:13px 0px 0px 0px;
-  background-color:#6730e3;color:#fff;
-  }
-  .rhsbox2:hover{
-  background-color:#5829c1;cursor:pointer;
-  }
-   .rhsbox2 h2{
-  font-size:17px;
-  }
-  .rhsbox2 p{
-  font-size:14px;line-height:1.7;
-  }
-  .row2{
-  width:100%;float:left;
-  padding:0px 0px 0px 120px;
-  }
-  .row2 h1{
-  font-size:27px;
-  padding:50px 0px 25px 0px;
-  }
-  .row2 p{
-  font-size:14px;line-height:1.8;
-  width:85%;
-  }
-  .row3{
-  width:100%;float:left;
-  padding:30px 0px 0px 120px;
-  }
-  .row3 h1{
-  font-size:26px;color:#3769ff;
-  padding:10px 0px;
-  }
-  .row3 h2{
-  font-size:17px;
-  }
-  .row3 p{
-  font-size:14px;line-height:1.7;width:85%;
-  padding:10px 0px;
-  }
-  .button2{
-  background-color:#3769ff;color: white;
-  opacity:100%;  border: none;
-  padding: 15px 26px;text-align: center;
-  display: inline-block;cursor: pointer;
-  font-size: 15px;
-  margin: 35px 0px;
-  }
-  .button2:hover{
-  text-decoration:underline;cursor:pointer;background-color:blue;
-  }
-  .row4{
-  width:100%;float:left;
-  padding:15px 0px 10px 120px;
-  }
-  .row4 h1{
-  font-size:26px;color:#3769ff;
-  padding:0px 0px 30px 0px;
-  }
-  .row4 h2{
-  font-size:17px;
-  }
-
-  .tile1{
-  float:left;padding:2% 8.5%;
-  border:solid grey;border-width:0px 2px 0px 2px;text-align:center;
-  }
-  .tile1:hover{
-  background-color:#f4f4f4;
-  cursor:pointer;box-shadow: 0px 4px 5px #888888;
-  }
-  .tile2{
-  float:left;padding:2% 7%;
-  border:solid grey;border-width:0px 2px 0px 0px;text-align:center;
-  }
-    .tile2:hover{
-  background-color:#f4f4f4;
-  cursor:pointer;box-shadow: 0px 4px 5px #888888;
-  }
-  .tile3{
-  float:left;padding:2% 7%;
-  border:solid grey;border-width:0px 2px 0px 0px;text-align:center;
-  }
-    .tile3:hover{
-  background-color:#f4f4f4;
-  cursor:pointer;box-shadow: 0px 4px 5px #888888;
-  }
-  .tile4{
-  float:left;padding:2% 7%;
-  border:solid grey;border-width:0px 2px 0px 0px;text-align:center;
-  }
-    .tile4:hover{
-  background-color:#f4f4f4;
-  cursor:pointer;box-shadow: 0px 4px 5px #888888;
-  }
-    .row4 i2{
-  visibility:hidden;
-  }
-  .row5{
-  width:100%;float:left;
-  padding:30px 0px 0px 120px;
-  }
-  .row5 h1{
-  font-size:26px;color:#3769ff;
-  padding:10px 0px 20px 0px;
-  }
-  .row5 h2{
-  font-size:17px;
-  }
-  .clm1, .clm2, .clm3{
-  float:left; width:30%;height:350px;
-  margin:15px 25px 0px 0px;
-  background-color:#3769ff;
-  }
-  .clm1:hover, .clm2:hover, .clm3:hover{
-  cursor:pointer;color:blue;
-  }
-  .clm1 img, .clm2 img, .clm3 img{
-  width:100%;height:auto;
-  }
-  .clm1 i, .clm2 i, .clm3 i{
-  width:350px;
-  }
-  .clm1 i img{
-  float:right;margin:0px 15px 0px 0px;
-  height:65px;width:290px;
-   }
-  .clm2 i img{
-  float:right;margin:0px 15px 0px 0px;
-  height:65px;width:130px;
-  }
-  .clm3 i img{
-  float:right;margin:0px 15px 0px 0px;
-  height:65px;width:175px
-  }
-    .clm1 p,.clm2 p, .clm3 p{
-  width:100%;margin:100px 0px 0px 0px;
-  font-size:12px;
-  }
-  .clm1 h3,.clm2 h3, .clm3 h3{
-  width:90%;font-size:18px;
-  padding:10px 0px;
-  }
-  .clm1 p2,.clm2 p2, .clm3 p2{
-  font-size:14px;line-height:1.6;
-  }
-  .row6{
-  width:100%;float:left;margin:400px 0px 0px 0px;
-  padding:30px 0px 0px 20px;
-  }
-  .row6 h4{
-  width:100%;font-size:12px;
-  }
-  .row6 p{
-  font-size:12px;line-height:4;
-  }
-  .row6 a{
-  color:#3769ff;text-decoration:underline;
-  }
-  .row6 a:hover{
-  text-decoration:none;background-color:#ddeaff;
-
-  }
-  .footer1{
-  width:100%;float:left;
-  background-color:#e6e6e6;
-  margin:20px 0px 0px 0px;
-  padding:10px 0px 0px 0px;
-   }
-  .footer1 p1{
-  font-size:16px;
-  padding:0px 0px 0px 10px;
-  }
-  .footer1 p2{
-  float:right;font-size:12px;
-  padding:20px 15px 25px 15px;color:#3769ff;
-  }
-.footer1 i{
-float:right;padding:20px 0px 25px 0px;color:#3769ff;
-}
-  .footer1ii p3i, .footer1ii p3ii, .footer1ii i2{
-display:none;
-  }
-  .footer2{
-  float:left;width:100%;font-size:15px;
-  padding:25px 0px 30px 8px;
-  color:#3769ff;background-color:#f4f4f4;
-  }
-    .f2clm1{
-  width:23%;float:left;
-  }
-  .f2clm1 p1, .f2clm1 a{
-  float:left;line-height:2.5;
-  width:100%;
-  }
-    .f2clm2{
-  width:23%;float:left;
-  }
-  .f2clm2 p1, .f2clm2 a{
-  float:left;line-height:2.5;
-  width:100%;
-  }
-  .f2clm3{
-  width:23%;float:left;line-height:2.5;
-  }
-  .f2clm3 a{
-  float:left;
-  width:100%;
-  }
-  .f2clm4{
-  width:23%;float:left;
-  }
-  .f2clm4 p1, .f2clm4 p2{
-  float:left;line-height:2.5;
-  width:100%;
-  }
-  .footer3{
-float:left;width:100%;background-color:#f4f4f4;
-  }
-   .footer3 p{
-float:left;padding:0px 0px 20px 10px;
-font-size:12px;color:#3769ff;
-  }
-.footer4{
-float:left;width:100%;background-color:#3769ff;
-  }
-.footer4 p{
-float:left;padding:37px 0px 37px 10px;
-font-size:12px;color:#fff;
-  }
-.footer4 img{
-float:right;margin:25px 20px 0px 0px;
-}
-.footer4 p2{
-visibility:hidden;
-}
-.f2clm4 p2:hover{
-cursor:pointer;
-}
-#myBtn {
-  display: none;position: fixed;
-  bottom: 20px;right: 30px;
-  z-index: 99;font-size: 18px;
-  border: none;outline: none;
-  background-color: #00bfb3;color: white;
-  cursor: pointer;padding: 20px;
-  border-radius: 100px;
+article > aside {
+    position: sticky;
+    top: 0;
+    width: 50%;
+    height: 100vh;
 }
 
-#myBtn:hover {
-  cursor:pointer;
+figure {
+    margin-left: 50%;
+    height: 100vh;
 }
-html, body{ scroll-behavior: smooth}
-.search2{
-display:none;
-}
-@media only screen and (max-width: 600px) {
-.header{
-width:100%;margin:0px 0px 0% 0px;
-}
-.header img{
-margin:0px 0px 0px 0px;float:left;
-height:40px;width:200px;
-
-}
-.header i1{
-visibility:visible;color:blue;padding:5%;
-float:right;padding:0%;font-size:20px;
-}
-.header i1:hover{
-cursor:pointer;
-}
-.header a{
-display:none;
-}
-.header i2{
-font-size:20px;border:solid grey;float:right;visibility:visible;
-border-width:0px 0px 0px 0px;color:blue;padding:5%;
-}
-.header i2:hover{
-cursor:pointer;
-}
-.header2{
-display:none;
-}
-.searchbar{
-display:none;
-}
-.bodyrow1{
-  background-image: url("ft2.jpg");
-  background-repeat: no-repeat;
-  background-attachment: absolute;
-  background-size: cover;
-  position: relative;
-  width:100%;height:auto;
-  padding:0px 5% 0px 5%;
-}
-.row1lhs{
-height:auto;width:100%;padding:35px 0px 0px 30px;
-background-color:#fff;opacity:80%;
-text-align:left;margin:50% 0px 0px 0px;
-}
-  .rhsbox1{
-  width:90%;padding:20px 20px 30px 20px;
-  margin:0px 0px 0px 5%;float:left;
-  background-color:#3769ff;color:#fff;
-  }
-  .rhsbox2{
-  width:90%;padding:20px 20px 30px 20px;
-  margin:2% 0px 0px 5%;float:left;
-  background-color:#6730e3;color:#fff;
-  }
-  .row2{
-  padding:5%;
-  }
-  .row3{
-  padding:5%;
-  }
-  .row4{
-  padding:5%;
-  }
-  .row5{
-  padding:5%;
-  }
-  .tile1{
- width:95%;height:60px;border:none;padding:10px 0px 0px 20px;
-  }
-  .tile1 img{
-  width:40px;height:40px;float:left;
-  }
-   .tile1 p{
-   padding:10px 20px;margin:none;float:left;
-   }
-   .tile2{
- width:95%;height:60px;border:none;padding:10px 0px 0px 20px;
-  }
-  .tile2 img{
-  width:40px;height:40px;float:left;
-  }
-   .tile2 p{
-   padding:10px 20px;margin:none;float:left;
-   }
-   .tile3{
- width:95%;height:60px;border:none;padding:10px 0px 0px 20px;
-  }
-  .tile3 img{
-  width:40px;height:40px;float:left;
-  }
-    .tile3 p{
-   padding:10px 20px;margin:none;float:left;
-   }
-   .tile4{
- width:95%;height:60px;border:none;padding:10px 0px 0px 20px;
-  }
-  .tile4 img{
-  width:40px;height:40px;float:left;
-  }
-    .tile4 p{
-   padding:10px 20px;margin:none;float:left;
-   }
-  .clm1, .clm2, .clm3{
-  float:left; width:100%;height:20%;
-  margin:30px 25px 0px 0px;background:none;
-  }
-  .clm1 img, .clm2 img, .clm3 img{
-  width:100%;height:auto;
-  }
-
-    .clm1 i, .clm2 i, .clm3 i{
-  padding:0% 0px 0px 0%;
-  }
-    .clm1 i img, .clm2 i img, .clm3 i img{
-  width:100%;background-color:#3769ff;padding:3%;
-  margin:0% 0px 0px 20%;
-  }
-  .row4 i2{
-  visibility:visible;float:right;padding:10px 5% 0px 0px;
-  font-size:15px;
-  }
-    .row6{
-  width:100%;float:left;margin:0px 0px 0px 0px;
-  padding:30px 0px 0px 20px;
-  }
-  .footer2{
-  display:none;
-  }
-  .footer1 p1{
-  width:100%;text-align:left;font-size:14px;padding:15px 0px 20px 15px;float:left;
-  }
-  .footer1 p2, .footer1 i{
-  display:none;
-  }
-  .footer1ii p3i{
-visibility:visible;width:100%;float:left;padding:20px 0px 10px 5%;color:#3769ff;
-  }
-  .footer1ii p3ii{
-  visibility:visible;float:left;padding:20px 0px 10px 5%;color:#3769ff;
-  }
-   .footer1ii i2{
-visibility:visible;float:right;padding:6.5% 5% 0% 0px;color:#3769ff;
-   }
-   .footer3{
-   padding:5% 0px 15% 5%;
-   }
-   .footer3 p{
-   width:100%;padding:2.5%;
-   }
-   .footer4{
-   float:left;
-   }
-  .footer4 p{
-   display:none;
-   }
-   .footer4 p2{
-   visibility:visible;
-   font-size:10px;margin:0% 5% 0px 7%;float:left;
-   color:#fff;width:80%;
-   }
-   .footer4 img{
-   padding:0% 0% 5% 7%;float:left;
-   }
-}
-@media only screen and (max-width: 768px) {
-.header{
-width:100%;margin:0px 0px 0% 0px;
-}
-.header img{
-margin:20px 0px 0px 20px;float:left;
-height:30px;width:125px;
-}
-.header i1{
-visibility:visible;color:blue;
-float:right;padding:3%;font-size:15px;
-}
-.header i1:hover{
-cursor:pointer;
-}
-.header a{
-display:none;
-}
-.header i2{
-font-size:15px;border:solid grey;float:right;visibility:visible;
-border-width:0px 1px 0px 1px;color:blue;padding:3%;
-}
-.header i2:hover{
-cursor:pointer;
-}
-.header2{
-display:none;
-}
-.searchbar{
-display:none;
-}
-.bodyrow1{
-  background-image: url("ft.jpg");
-  background-repeat: no-repeat;
-  background-attachment: absolute;
-  background-size: cover;
-  position: relative;
-  width:100%;height:auto;
-  padding:0px 5% 0px 5%;
-}
-.row1lhs{
-height:auto;width:100%;padding:35px 0px 0px 30px;
-background-color:#fff;opacity:100%;
-text-align:left;margin:50% 0px 0px 0px;
-}
-  .rhsbox1{
-  width:90%;padding:20px 20px 30px 20px;
-  margin:0px 0px 0px 5%;float:left;
-  background-color:#3769ff;color:#fff;
-  }
-  .rhsbox2{
-  width:90%;padding:20px 20px 30px 20px;
-  margin:2% 0px 0px 5%;float:left;
-  background-color:#6730e3;color:#fff;
-  }
-  .row2{
-  padding:5%;
-  }
-  .row3{
-  padding:5%;
-  }
-  .row4{
-  padding:0% 5%;
-  }
-  .row5{
-  padding:5%;
-  }
-  .tile1{
- width:95%;height:60px;border:none;padding:10px 0px 0px 0%;
-  }
-  .tile1 img{
-  width:40px;height:40px;float:left;
-  }
-   .tile1 p{
-   padding:10px 20px;margin:none;float:left;
-   }
-   .tile2{
- width:95%;height:60px;border:none;padding:10px 0px 0px 0%;
-  }
-  .tile2 img{
-  width:40px;height:40px;float:left;
-  }
-   .tile2 p{
-   padding:10px 20px;margin:none;float:left;
-   }
-   .tile3{
- width:95%;height:60px;border:none;padding:10px 0px 0px 0%;
-  }
-  .tile3 img{
-  width:40px;height:40px;float:left;
-  }
-    .tile3 p{
-   padding:10px 20px;margin:none;float:left;
-   }
-   .tile4{
- width:95%;height:60px;border:none;padding:10px 0px 0px 0%;
-  }
-  .tile4 img{
-  width:40px;height:40px;float:left;
-  }
-    .tile4 p{
-   padding:10px 20px;margin:none;float:left;
-   }
-  .clm1, .clm2, .clm3{
-  float:left; width:100%;height:20%;
-  margin:30px 25px 0px 0px;background:none;
-  }
-  .clm1 img, .clm2 img, .clm3 img{
-  width:100%;height:auto;
-  }
-
-    .clm1 i, .clm2 i, .clm3 i{
-  padding:0% 0px 0px 0%;
-  }
-    .clm1 i img, .clm2 i img, .clm3 i img{
-  width:100%;background-color:#3769ff;padding:3%;
-  margin:0% 0px 0px 20%;
-  }
-  .row4 i2{
-  visibility:visible;float:right;padding:10px 5% 0px 0px;
-  font-size:15px;
-  }
-    .row6{
-  width:100%;float:left;margin:0px 0px 0px 0px;
-  padding:30px 0px 0px 20px;
-  }
-  .footer2{
-  display:none;
-  }
-  .footer1 p1{
-  width:100%;text-align:left;font-size:14px;padding:15px 0px 20px 15px;float:left;
-  }
-  .footer1 p2, .footer1 i{
-  display:none;
-  }
-  .footer1ii p3i{
-visibility:visible;width:100%;float:left;padding:20px 0px 10px 5%;color:#3769ff;
-  }
-  .footer1ii p3ii{
-  visibility:visible;float:left;padding:20px 0px 10px 5%;color:#3769ff;
-  }
-   .footer1ii i2{
-visibility:visible;float:right;padding:5% 5% 3% 0px;color:#3769ff;
-   }
-   .footer3{
-   padding:5% 0px 5% 5%;
-   }
-   .footer3 p{
-   width:100%;padding:2.5%;
-   }
-   .footer4{
-   float:left;
-   }
-  .footer4 p{
-   display:none;
-   }
-   .footer4 p2{
-   visibility:visible;
-   font-size:10px;margin:0% 5% 5% 7%;float:left;
-   color:#fff;width:80%;
-   }
-   .footer4 img{
-   padding:0% 0% 5% 7%;float:left;
-   }
+figure:first-of-type {
+    margin-top: -100vh;
 }
 
 
-
-</style>
-</head>
-<body>
-<div class="header">
-<img src="headerimg.png" width="193px" height="40px" class="logo">
-<a href="#">Contact Us</a>
-<a href="#"><i class='fa'>&#xf023;</i>Accounts Access<vl></vl></a>
-<a href="#">Institutional Investors<vl></vl></a>
-<i1 class="fa fa-bars"></i1>
-<i2 class="fa fa-search"></i2>
-</div>
-<div class="header2">
-<a href="#">Our Clients</a>
-<a href="#">Investment Capabilities</a>
-<a href="#">Investment Managers</a>
-<a href="#">Insights</a>
-<a href="#">Our Firm</a>
-<div class="searchbar">
-<i class="fa fa-search" ></i>
-<p>Search Franklin Templeton</p>
-</div>
-</div>
-<div class=row1>
-<div class="bodyrow1">
-<div class=row1lhs>
-<h1>2024 Private Markets Outlook</h1>
-<p>After a challenging 2023, we believe institutions who can act as liquidity providers for others or have the flexibility to deploy capital will be poised to capitalize on some unique and compelling risk/return opportunities in 2024.</p>
-<h2 class="button1">Get the Report</h2>
-</div>
-</div>
-<div class=rhsbox1>
-<h2><strong>Fixed Income: Avoiding Herd Mentality</strong></h2>
-<p>In fixed income, behavioral bias can lead to structural inefficiency. Discover a different approach to uncover new sources of alpha.</p>
-</div>
-<div class=rhsbox2>
-<h2><strong>Institutional Investors Trends</strong></h2>
-<p>We discuss the latest institutional portfolio trends around asset allocations, alternatives, private markets, equities, and fixed income.</p>
-</div>
-</div>
-<div class="row2">
-<h1><strong>Explore our <span style="color:blue">Investment Managers</span></strong></h1>
-<p>Access our specialist investment managers - across public and private markets – through a single, powerful partnership. Each has investment autonomy and a unique culture, bringing a full range of strategies and vehicles. Our commitment is to help you efficiently allocate and craft custom solutions through insights, support, and consultation services.</p>
-</div>
-
-
-
-
-<div class="tile">
-<div
-    x-data="{}"
-    x-init="$nextTick(() => {
-        let ul = $refs.logos;
-        ul.insertAdjacentHTML('afterend', ul.outerHTML);
-        ul.nextSibling.setAttribute('aria-hidden', 'true');
-    })"
-    class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
->
-    <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-        <li>
-            <img src="tile1.png" height="100" width="200" />
-        </li>
-        <li>
-            <img src="tile2.png" height="100" width="200" />
-        </li>
-        <li>
-            <img src="tile3.png" height="100" width="200" />
-        </li>
-        <li>
-            <img src="tile4.png" height="100" width="200" />
-        </li>
-        <li>
-            <img src="tile5.png" height="100" width="200" />
-        </li>
-        <li>
-            <img src="tile6.png" height="100" width="200" />
-        </li>
-        <li>
-            <img src="tile7.png" height="100" width="200" />
-        </li>
-        <li>
-            <img src="tile8.png" height="100" width="200" />
-        </li>
-                <li>
-            <img src="tile9.png" height="100" width="200" />
-        </li>
-                <li>
-            <img src="tile10.png" height="100" width="200" />
-        </li>
-                <li>
-            <img src="tile11.png" height="145" width="250" />
-        </li>
-
-    </ul>
-</div>
-</div>
-
-
-
-
-
-<div class=row3>
-<h2>OUR CLIENTS</h2>
-<h1><strong>Who we serve</strong></h1>
-<p>For nearly 50 years, Franklin Institutional has been a trusted partner to clients around the world. From large retirement and pension plans to government institutions, endowments and foundations, we have helped institutional investors meet their financial goals.</p>
-<div class="button2"><strong>Our Clients</strong></div>
-</div>
-<div class="row4">
-<h2>WHAT WE DO</h2>
-<h1><strong>Explore Our Capabilities</strong></h1>
-
-<div class="tile1"><i> <img src="eqity.png"></i>
-<p>Equity</p>
-<i2 class="fa fa-angle-right"></i2>
-</div>
-<div class="tile2"><i> <img src="fixed income.png"></i>
-<p>Fixed Income</p>
-<i2 class="fa fa-angle-right"></i2>
-</div>
-<div class="tile3"><i> <img src="alternatives.png"></i>
-<p>Alternatives</p>
-<i2 class="fa fa-angle-right"></i2>
-</div>
-<div class="tile4"><i> <img src="Multi asset.png"></i>
-<p>Multi Asset</p>
-<i2 class="fa fa-angle-right"></i2>
-</div>
-</div>
-<div class="row5">
-<h2>INSIGHTS</h2>
-<h1><strong>Read our latest thinking on market topics</strong></h1>
-<div class="clm1">
-<img src="institute.png">
-<i><img src="svg1.svg"></i>
-<p>APRIL 2, 2024</p>
-<h3>Central Bank Watch</h3>
-<p2>The Franklin Templeton Fixed Income (FTFI) Central Bank Watch is a qualitative assessment of the central banks for the Group of Ten (G10) nations plus two additional countries (China and South Korea).</p2>
-</div>
-<div class="clm2">
-<img src="fi.png">
-<i><img src="svg2.svg"></i>
-<p>MARCH 27, 2024</p>
-<h3>Quick Thoughts:Do elections matter for markets?</h3>
-<p2>The upcoming US presidential elections transcend mere political rivalry. Stephen Dover, Head of Franklin Institute, examines the policy differences between the major parties and their potential implications on capital markets in the years to come. He also discusses whether elections and their outcomes have significantly affected equity markets or if other factors made more of an impact.</p2>
-</div>
-<div class="clm3">
-<img src="eqity group.png">
-<i><img src="svg3.svg"></i>
-<p>MARCH 27, 2024</p>
-<h3>Sharpen your pencils-It's budget season</h3>
-<p2>State budget offices and municipal bond analysts evaluate the economic and fiscal outlook for the next fiscal year. In this document, we examine how California, New York and Illinois have different budget situations and how they plan to balance their budgets using various tools.</p2>
-</div>
-</div>
-<div class="row6">
-<h4><strong>Client Relationship Summary (Form CRS)</strong></h4>
-<p>You can learn about the services our investment advisers and broker-dealers provide to clients (including retail clients) by reviewing our <a href="#">Client Relationship Summaries.</a></p>
-<p><strong>Franklin Distributors, LLC.</strong> Member <a href="#">FINRA </a>/<a href="#"> SIPC</a>. Prior to July 7, 2021, Franklin Templeton Distributors, Inc., and Legg Mason Investor Services, LLC served as mutual fund distributors for Franklin Templeton.</p>
-<p>This site is intended only for U.S. Institutional Investors and Consultants. Using it means you agree to our <a href="#">Terms of Use.</a>
-</p>
-<p>If you would like information on Franklin Templeton’s retail mutual funds, please visit <a href="#">www.franklintempleton.com.</a></p>
-</div>
-<div class="footer1">
-<p1>This website is intended for residents of the United States.</p1>
-<p2>US Institutional</p2>
-<i class="fas fa-angle-down" style="font-size:15px;"></i>
-<p2>Institutional Investors</p2>
-</div>
-<div class="footer1ii">
-<p3i>US Institutional</p3i>
-<p3ii>Institutional Investors</p3ii>
-<i2 class="fas fa-angle-down" style="font-size:15px;"></i2>
-</div>
-<div class="footer2">
-<div class="f2clm1">
-<p1><strong>Our Clients</strong></p1>
-<a href="#">Defined Benefit Plans</a>
-<a href="#">Defined Contribution Plans</a>
-<a href="#">Endowments Foundations</a>
-<a href="#">Healthcare Systems</a>
-<a href="#">Insurance & Subadvisory</a>
-<a href="#">Insurance General Accounts</a>
-<a href="#">Investment Consultants</a>
-</div>
-<div class="f2clm2">
-<p1><strong>Investment Capabilities</strong></p1>
-<a href="#">Investment Strategies</a>
-<a href="#">Investment Themes</a>
-<a href="#">Specialist Investment Managers</a>
-<a href="#">Funds</a>
-</div>
-<div class="f2clm3">
-<a href="#"><strong>Insights</strong></a>
-</div>
-<div class="f2clm4">
-<p1><strong><a href="#">Our Firm</a></strong></p1>
-<p2>Why Choose Franklin Templeton</p2>
-<p2>Sustainable Investing</p2>
-<p2>Diversity and Inclusion</p2>
-<p2>Our History</p2>
-<p2>Contact Us</p2>
-<p2>Press Center</p2>
-</div>
-</div>
-<div class="footer3">
-<p>Privacy</p>
-<p>Contact with us</p>
-</div>
-<div class="footer4">
-<p>Copyright © 2024 Franklin Templeton. All Rights Reserved.</p>
-<img src="footer logo.png" width="200px" height="50px">
-<p2>Copyright © 2024 Franklin Templeton. All Rights Reserved.</p2>
-</div>
-<button onclick="topFunction()" id="myBtn" title="Go to top"><i class='fas fa-arrow-up' style='font-size:36px'></i></button>
-</body>
-</html>
-<script>
-// Get the button
-let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 850 || document.documentElement.scrollTop > 850) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+/* * * * * * * * * * * * * * * * * * * * * * *\
+|* Coloring and styling so things look cute  *|
+\* * * * * * * * * * * * * * * * * * * * * * */
+article > aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.documentElement.scrollTop = 0;
+article:nth-of-type(1) > aside {  background-color: #3c3;  }
+article:nth-of-type(2) > aside {  background-color: #c33;  }
 
+figure {
+    background-image: url(http://via.placeholder.com/500x500);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #444;
 }
-</script>
+
+h1 {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-style: italic;
+}
+p {
+    font-size: 18px;
+}
+hr {
+    width: 50%;
+    background-color: #fff;
+    margin: 30px;
+    height: 1px;
+}
+
+.spacing {
+    margin: 30px auto;
+    padding: 30px;
+    line-height: 1.5;
+    max-width: 500px;
+}
+.spacing:first-letter {
+    line-height: 1;
+    font-size: 30px;
+    font-weight: bold;
+}
+<header class="spacing">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</header>
+<section>
+    <article>
+        <aside>
+            <h1> Section I </h1>
+            <hr>
+            <p> Your content goes here </p>
+        </aside>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+    </article>
+    <article>
+        <aside>
+            <h1> Section II </h1>
+            <hr>
+            <p> Your other content goes here </p>
+        </aside>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+    </article>
+</section>
+<footer class="spacing">
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+</footer>
